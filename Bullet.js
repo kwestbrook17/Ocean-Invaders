@@ -6,7 +6,7 @@ export default class Bullet {
     this.velocity = velocity;
     this.bulletColor = bulletColor;
 
-//shape of bullet
+    //shape of bullet
     this.width = 5;
     this.height = 20;
   }
