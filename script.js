@@ -33,3 +33,10 @@ function game() {
 
 //this interval makes the game fucntion execute 60 times every sec (60fps)
 setInterval(game, 1000 / 60);
+
+const MAX_HEIGHT = 600
+const MAX_WIDTH = 600
+https://unsplash.com/photos/e3dY8laAQtA?client_id=_Z7eSHpRXlC2EFiyLPlD_Fc2UajDEr6_q58XOHeI0Y4
+function getMediaSize(iw, ih) {
+    
+}
