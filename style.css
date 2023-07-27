@@ -13,3 +13,11 @@ body {
   margin: 0px;
   height: 100vh;
 }
+
+ #playlist-container {
+      min-height: 360px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
