@@ -48,7 +48,7 @@ export default class Player {
     }
   }
 
-  keydown = event => {
+  keydown = (event) => {
     if (event.code == "ArrowRight") {
       this.rightPressed = true;
     }
@@ -59,7 +59,7 @@ export default class Player {
       this.shootPressed = true;
     }
   };
-  keyup = event => {
+  keyup = (event) => {
     if (event.code == "ArrowRight") {
       this.rightPressed = false;
     }

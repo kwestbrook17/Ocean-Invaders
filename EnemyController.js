@@ -21,10 +21,18 @@ export default class EnemyController {
   defaultYVelocity = 1;
   moveDownTimerDefault = 30;
   moveDownTimer = this.moveDownTimerDefault;
+  fireBulletTimerDefault = 100;
+  fireBulletTimer = this.fireBulletTimerDefault;
 
   // this gives the enemies the same parameters as the canvas
-  constructor(canvas) {
+  constructor(canvas, enemyBulletController, playerBulletController) {
     this.canvas = canvas;
+    this.enemyBulletController = enemyBulletController;
+    this.playerBulletController = playerBulletController;
+
+    this.enemyDeathSound = new Audio("assets/sounds/enemy-death.wav");
+    this.enemyDeathSound.volume = 0.5;
+
     this.createEnemies();
   }
 
@@ -32,8 +40,39 @@ export default class EnemyController {
   draw(ctx) {
     this.decrementMoveDownTimer();
     this.updateVelocityAndDirection();
+    this.collisionDetection();
     this.drawEnemies(ctx);
     this.resetMoveDownTimer();
+    this.fireBullet();
+  }
+
+  collisionDetection() {
+    this.enemyRows.forEach((enemyRow) => {
+      enemyRow.forEach((enemy, enemyIndex) => {
+        //checks if there are any collisions between enemy and bullets
+        if (this.playerBulletController.collideWith(enemy)) {
+          // plays sound when enemy is hit and resets sound
+          this.enemyDeathSound.currentTime = 0;
+          this.enemyDeathSound.play();
+          enemyRow.splice(enemyIndex, 1);
+        }
+      });
+    });
+    this.enemyRows = this.enemyRows.filter((enemyRow) => enemyRow.length > 0);
+  }
+
+  // handles enemies firing bullets
+  fireBullet() {
+    this.fireBulletTimer--;
+    if (this.fireBulletTimer <= 0) {
+      // resets fire bullet timer
+      this.fireBulletTimer = this.fireBulletTimerDefault;
+      const allEnemies = this.enemyRows.flat();
+      const enemyIndex = Math.floor(Math.random() * allEnemies.length);
+      const enemy = allEnemies[enemyIndex];
+      this.enemyBulletController.shoot(enemy.x + enemy.width / 2, enemy.y, -3);
+      console.log(enemyIndex);
+    }
   }
 
   resetMoveDownTimer() {

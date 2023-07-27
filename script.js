@@ -19,7 +19,12 @@ background.src = "assets/images/ocean-background.jpg";
 //red is the color of the bullets
 //true references the sound
 const playerBulletController = new BulletController(canvas, 10, "red", true);
-const enemyController = new EnemyController(canvas);
+const enemyBulletController = new BulletController(canvas, 4, "white", false);
+const enemyController = new EnemyController(
+  canvas,
+  enemyBulletController,
+  playerBulletController
+);
 const player = new Player(canvas, 3, playerBulletController);
 
 function game() {
@@ -27,8 +32,7 @@ function game() {
   enemyController.draw(ctx);
   player.draw(ctx);
   playerBulletController.draw(ctx);
-
-  player.draw(ctx);
+  enemyBulletController.draw(ctx);
 }
 
 //this interval makes the game fucntion execute 60 times every sec (60fps)
