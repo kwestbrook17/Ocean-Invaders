@@ -1,6 +1,7 @@
 export default class Player {
   rightPressed = false;
   leftPressed = false;
+  shootPressed = false;
 
   constructor(canvas, velocity, bulletController) {
     this.canvas = canvas;
@@ -47,23 +48,23 @@ export default class Player {
     }
   }
 
-  keydown = (event) => {
+  keydown = event => {
     if (event.code == "ArrowRight") {
-      this.rightPressed = false;
+      this.rightPressed = true;
     }
     if (event.code == "ArrowLeft") {
-      this.rightPressed = false;
+      this.leftPressed = true;
     }
     if (event.code == "Space") {
       this.shootPressed = true;
     }
   };
-  keyup = (event) => {
+  keyup = event => {
     if (event.code == "ArrowRight") {
       this.rightPressed = false;
     }
     if (event.code == "ArrowLeft") {
-      this.rightPressed = false;
+      this.leftPressed = false;
     }
     if (event.code == "Space") {
       this.shootPressed = false;
