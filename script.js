@@ -22,6 +22,9 @@ const playerBulletController = new BulletController(canvas, 10, "red", true);
 const enemyController = new EnemyController(canvas);
 const player = new Player(canvas, 3, playerBulletController);
 
+let isGameOver = false;
+let didWin = false;
+
 function game() {
   checkGameOver();
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
