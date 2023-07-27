@@ -72,5 +72,5 @@ function checkGameOver() {
     isGameOver = true;
   }
 }
-//this interval makes the game fucntion execute 60 times every sec (60fps)
+//this interval makes the game fucntion execute 60 times every sec (60fps)..git ad
 setInterval(game, 1000 / 60);
