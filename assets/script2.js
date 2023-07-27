@@ -12,6 +12,7 @@ const playerBulletController = new BulletController(canvas,10, "red",true)
 
 // add playerBulletController into new Player() line 18
 
+
 // in function game() add:
 //playerBulletController.draw(ctx);
 

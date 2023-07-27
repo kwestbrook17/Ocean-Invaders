@@ -28,5 +28,5 @@ export default class Bullet {
     } else {
       return false;
     }
-  }
+  }   
 }

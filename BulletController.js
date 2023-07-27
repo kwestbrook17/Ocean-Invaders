@@ -12,8 +12,9 @@ export default class BulletController {
 
     this.shootSound = new Audio("sounds/shoot.wav");
     this.shootSound.volume = 0.5;
-  }
-
+  }  
+ 
+ 
   draw(ctx) {
     this.bullets = this.bullets.filter(
       (bullet) => bullet.y + bullet.width > 0 && bullet.y <= this.canvas.height
