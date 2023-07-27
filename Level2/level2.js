@@ -1,7 +1,7 @@
 // This controller allows for the modules of js to be imported and used
-import EnemyController from "./EnemyController.js";
-import Player from "./Player.js";
-import BulletController from "./BulletController.js";
+import EnemyController from "./level2EnemyController.js";
+import Player from "./Player2.js";
+import BulletController from "./BulletController2.js";
 
 const canvas = document.getElementById("game");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2 demensional drawings)
@@ -13,7 +13,7 @@ canvas.height = 600;
 
 const background = new Image();
 // sets background for canvas
-background.src = "assets/images/ocean-background.jpg";
+background.src = "../assets/images/ocean-background.jpg";
 
 // 10 refereneces maximum bullets per screen
 //red is the color of the bullets
