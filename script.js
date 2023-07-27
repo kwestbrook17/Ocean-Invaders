@@ -41,6 +41,36 @@ function game() {
     enemyBulletController.draw(ctx);
   }
 }
+//Game Over display/where we can add new levels
+function displayGameOver() {
+  if (isGameOver) {
+    let text = didWin ? "You Win" : "Game Over";
+    let textOffset = didWin ? 3.5 : 5;
 
+    ctx.fillStyle = "white";
+    ctx.font = "70px Arial";
+    ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
+  }
+}
+
+function checkGameOver() {
+  if (isGameOver) {
+    return;
+  }
+
+  if (enemyBulletController.collideWith(player)) {
+    isGameOver = true;
+  }
+
+  if (enemyController.collideWith(player)) {
+    isGameOver = true;
+  }
+
+  // to change levels
+  if (enemyController.enemyRows.length === 0) {
+    didWin = true;
+    isGameOver = true;
+  }
+}
 //this interval makes the game fucntion execute 60 times every sec (60fps)
 setInterval(game, 1000 / 60);
