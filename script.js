@@ -27,12 +27,19 @@ const enemyController = new EnemyController(
 );
 const player = new Player(canvas, 3, playerBulletController);
 
+let isGameOver = false;
+let didWin = false;
+
 function game() {
+  checkGameOver();
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+  displayGameOver();
+  if (!isGameOver) {
   enemyController.draw(ctx);
   player.draw(ctx);
   playerBulletController.draw(ctx);
-  enemyBulletController.draw(ctx);
+
+  player.draw(ctx);
 }
 
 //this interval makes the game fucntion execute 60 times every sec (60fps)
