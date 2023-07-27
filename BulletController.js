@@ -32,6 +32,7 @@ export default class BulletController {
     );
 
     if (bulletThatHitSpriteIndex >= 0) {
+      //this removes bullet if it hits
       this.bullets.splice(bulletThatHitSpriteIndex, 1);
       return true;
     }

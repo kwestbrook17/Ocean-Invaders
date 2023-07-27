@@ -19,7 +19,12 @@ background.src = "assets/images/ocean-background.jpg";
 //red is the color of the bullets
 //true references the sound
 const playerBulletController = new BulletController(canvas, 10, "red", true);
-const enemyController = new EnemyController(canvas);
+const enemyBulletController = new BulletController(canvas, 4, "white", false);
+const enemyController = new EnemyController(
+  canvas,
+  enemyBulletController,
+  playerBulletController
+);
 const player = new Player(canvas, 3, playerBulletController);
 
 let isGameOver = false;
@@ -30,14 +35,12 @@ function game() {
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
   displayGameOver();
   if (!isGameOver) {
-  enemyController.draw(ctx);
-  player.draw(ctx);
-  playerBulletController.draw(ctx);
-
-  player.draw(ctx);
+    enemyController.draw(ctx);
+    player.draw(ctx);
+    playerBulletController.draw(ctx);
+    enemyBulletController.draw(ctx);
   }
 }
-
 //Game Over display/where we can add new levels
 function displayGameOver() {
   if (isGameOver) {
@@ -63,14 +66,13 @@ function checkGameOver() {
     isGameOver = true;
   }
 
-// to change levels
+  // to change levels
   if (enemyController.enemyRows.length === 0) {
     didWin = true;
     isGameOver = true;
   }
 }
-
-//this interval makes the game fucntion execute 60 times every sec (60fps)
+//this interval makes the game fucntion execute 60 times every sec (60fps)..git ad
 setInterval(game, 1000 / 60);
 
 
