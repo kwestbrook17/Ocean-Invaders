@@ -10,10 +10,10 @@ export default class Player {
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height - 75;
     // set width and height to the height we set our player
-    this.width = 50;
-    this.height = 48;
+    this.width = 70;
+    this.height = 68;
     this.image = new Image();
-    this.image.src = "assets/images/player.png";
+    this.image.src = "assets/images/playerNoMotion.png";
 
     document.addEventListener("keydown", this.keydown);
     document.addEventListener("keyup", this.keyup);
