@@ -72,3 +72,23 @@ function checkGameOver() {
 
 //this interval makes the game fucntion execute 60 times every sec (60fps)
 setInterval(game, 1000 / 60);
+
+
+// Spotify API
+createPlaylistIframe();
+
+    function createPlaylistIframe() {
+      const playlistId = '5x9iRviSpvJv4rrHFT3WP0';
+      const iframe = document.createElement('iframe');
+      iframe.title = 'Spotify Embed: Recommendation Playlist';
+      iframe.src = `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`;
+      iframe.width = '100%';
+      iframe.height = '100%';
+      iframe.style.minHeight = '360px';
+      iframe.frameBorder = '0';
+      iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+      iframe.loading = 'lazy';
+
+      const playlistContainer = document.getElementById('playlist-container');
+      playlistContainer.appendChild(iframe);
+    }
