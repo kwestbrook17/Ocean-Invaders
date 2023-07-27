@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  font-family: "Press Start 2P", cursive; /* If using an arcade-like font */
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.arcade-menu {
+  text-align: center;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arcade-menu a {
+  display: block;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.arcade-menu a:hover {
+  background-color: #fff;
+  color: #111;
+}
