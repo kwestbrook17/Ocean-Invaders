@@ -164,4 +164,3 @@ function createPlaylistIframe() {
   playlistContainer.appendChild(iframe);
 }
 
-})
