@@ -77,6 +77,9 @@ function checkGameOver() {
     isGameOver = true;
   }
 }
+
+//submit initials if game over
+
 //this interval makes the game fucntion execute 60 times every sec (60fps)
 setInterval(game, 1000 / 60);
 
