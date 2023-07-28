@@ -6,7 +6,6 @@ import BulletController from "./BulletController.js";
 const canvas = document.getElementById("game");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2 demensional drawings)
 const ctx = canvas.getContext("2d");
-
 //sets the size of canvas
 canvas.width = 600;
 canvas.height = 600;
@@ -102,13 +101,3 @@ function createPlaylistIframe() {
   const playlistContainer = document.getElementById("playlist-container");
   playlistContainer.appendChild(iframe);
 }
-fetch("https://api.unsplash.com/photos/random?client_id=_Z7eSHpRXlC2EFiyLPlD_Fc2UajDEr6_q58XOHeI0Y4&query=underwater").then(
-  function(response){
-      return response.json()
-  }
-).then(function(data){
-  document.getElementById("ocean").setAttribute("src",data.urls.full)
-
-
-
-})
