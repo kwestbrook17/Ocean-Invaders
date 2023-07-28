@@ -1,0 +1,65 @@
+/* highscoresstyles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111111;
+  font-family: "Press Start 2P", cursive; /* If using an arcade-like font */
+}
+
+h1 {
+  color: #000000;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  text-align: center;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+a {
+  display: block;
+  color: #000000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
