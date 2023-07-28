@@ -150,6 +150,9 @@ function startGame() {
   setInterval(updateScore, 1000);
 }
 
+// Call the startGame function to start the game
+startGame();
+
 // Spotify API
 createPlaylistIframe();
 
