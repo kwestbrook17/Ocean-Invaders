@@ -164,5 +164,4 @@ function createPlaylistIframe() {
   playlistContainer.appendChild(iframe);
 }
 
-// Initialize the game
-startGame();
+})
