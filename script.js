@@ -91,7 +91,7 @@ function displayGameOver() {
       saveButton.style.position = "absolute";
       saveButton.style.top = canvas.height / 2 + 5 + "px";
       saveButton.style.left = canvas.width / 2 + 70 + initialsInput.offsetWidth + 10 + "px";
-       saveButton.addEventListener("click", saveData);
+      saveButton.addEventListener("click", saveData);
     }
   }
 }
@@ -143,6 +143,9 @@ function startGame() {
   setInterval(game, 1000 / 60);
   setInterval(updateScore, 1000);
 }
+
+// Call the startGame function to start the game
+startGame();
 
 // Spotify API
 createPlaylistIframe();
