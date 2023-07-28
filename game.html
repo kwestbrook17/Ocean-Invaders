@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Ocean Invaders</title>
-    <link rel="shortcut icon" href="assets/images/playerNoMotion.png" />
-  </head>
-  <body>
-    <h1>Ocean Invaders</h1>
-    <canvas id="game"></canvas>
-    <div class="user-input"> <input class="initials-button" type="text"> <button class="initial">Input Initials</button>
-    </div>
-    <p id="score" style="display: none;"></p> 
-    <script type="module" src="script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <title>Ocean Invaders</title>
+  <link rel="shortcut icon" href="assets/images/playerNoMotion.png" />
+</head>
+
+<body>
+  <h1>Ocean Invaders</h1>
+  <canvas id="game"></canvas>
+  <div class="user-input">
+    <input class="initials-button" type="text" id="initialsInput" />
+    <button class="initial" onclick="saveInitials()">Input Initials</button>
+  </div>
+  <p id="score" style="display: none;"></p>
+
+  <script type="module" src="script.js"></script>
   <div id="playlist-container"></div>
+</body>
+
 </html>
