@@ -7,7 +7,7 @@ const canvas = document.getElementById("game");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2-dimensional drawings)
 const ctx = canvas.getContext("2d");
 
-// sets the size of the canvas
+//sets the size of canvas
 canvas.width = 600;
 canvas.height = 600;
 
@@ -73,7 +73,12 @@ function displayGameOver() {
     } else {
       // Draw the input initials field on the canvas
       ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
-      ctx.fillRect(canvas.width / 4, canvas.height / 2 - 40, canvas.width / 2, 80);
+      ctx.fillRect(
+        canvas.width / 4,
+        canvas.height / 2 - 40,
+        canvas.width / 2,
+        80
+      );
 
       ctx.font = "30px Arial";
       ctx.fillStyle = "black";
@@ -90,7 +95,8 @@ function displayGameOver() {
       saveButton.style.display = "block";
       saveButton.style.position = "absolute";
       saveButton.style.top = canvas.height / 2 + 5 + "px";
-      saveButton.style.left = canvas.width / 2 + 70 + initialsInput.offsetWidth + 10 + "px";
+      saveButton.style.left =
+        canvas.width / 2 + 70 + initialsInput.offsetWidth + 10 + "px";
       saveButton.addEventListener("click", saveData);
     }
   }
@@ -166,4 +172,3 @@ function createPlaylistIframe() {
   const playlistContainer = document.getElementById("playlist-container");
   playlistContainer.appendChild(iframe);
 }
-
