@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ocean Invaders</title>
     <link rel="stylesheet" href="stylemenu.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-    <div id="arcade-menu">
-      <h1>Ocean Invaders</h1>
-      <a href="game.html">Start</a>
-      <a href="highscore.html">High Scores</a>
-      <button id="Music">Play Music</button>
+    <div id="arcade-menu" class="text-black ">
+      <h1 class="text-3xl mb-8">Ocean Invaders</h1>
+      <a href="game.html" class="block text-black text-lg no-underline p-4 mb-4 rounded hover:bg-white hover:text-black">Start</a>
+      <a href="highscore.html" class="block text-black text-lg no-underline p-4 mb-4 rounded hover:bg-white hover:text-black">High Scores</a>
+      <div id="Music" class="text-black mb-4">Play Music</div>
       <script src="menu.js"></script>
       <div id="playerContainer"></div>
       <script src="https://www.youtube.com/iframe_api"></script> 
