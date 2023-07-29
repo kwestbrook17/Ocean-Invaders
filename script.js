@@ -71,39 +71,39 @@ function displayGameOver() {
         window.location.href = "level2/level2.html";
       }, 2000); // 2 seconds
     } else {
-  // Get the reference to the initials input field using its ID
-const initialsInput = document.getElementById("initialsInput");
+      // Get the reference to the initials input field using its ID
+      const initialsInput = document.getElementById("initialsInput");
 
-// Calculate the position for the initials input field
-const inputTop = canvas.height / 2 - initialsInput.offsetHeight / 2;
-const inputLeft = canvas.width / 2 - initialsInput.offsetWidth / 2;
+      // Calculate the position for the initials input field
+      const inputTop = canvas.height / 2 - initialsInput.offsetHeight / 2;
+      const inputLeft = canvas.width / 2 - initialsInput.offsetWidth / 2;
 
-// Set the display and position styles for the initials input field
-initialsInput.style.display = "block";
-initialsInput.style.position = "absolute";
-initialsInput.style.top = inputTop + "px";
-initialsInput.style.left = inputLeft + "px";
-initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
-initialsInput.style.color = "white";
+      // Set the display and position styles for the initials input field
+      initialsInput.style.display = "block";
+      initialsInput.style.position = "absolute";
+      initialsInput.style.top = inputTop + "px";
+      initialsInput.style.left = inputLeft + "px";
+      initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
+      initialsInput.style.color = "white";
 
 
-// Create the save button
-const saveButton = document.querySelector(".initial");
+      // Create the save button
+      const saveButton = document.querySelector(".initial");
 
-// Calculate the position for the save button
-const buttonTop = inputTop + initialsInput.offsetHeight + 10;
-const buttonLeft = canvas.width / 2 - saveButton.offsetWidth / 2;
+      // Calculate the position for the save button
+      const buttonTop = inputTop + initialsInput.offsetHeight + 10;
+      const buttonLeft = canvas.width / 2 - saveButton.offsetWidth / 2;
 
-// Set the display and position styles for the save button
-saveButton.style.display = "block";
-saveButton.style.position = "absolute";
-saveButton.style.top = buttonTop + "px";
-saveButton.style.left = buttonLeft + "px";
-saveButton.style.backgroundColor = "green"; // Set the background color to green
-saveButton.style.color = "white"; // Set the text color to white
+      // Set the display and position styles for the save button
+      saveButton.style.display = "block";
+      saveButton.style.position = "absolute";
+      saveButton.style.top = buttonTop + "px";
+      saveButton.style.left = buttonLeft + "px";
+      saveButton.style.backgroundColor = "green"; // Set the background color to green
+      saveButton.style.color = "white"; // Set the text color to white
 
-      
-      
+
+
       saveButton.addEventListener("click", saveData);
     }
   }
@@ -160,22 +160,3 @@ function startGame() {
 // Call the startGame function to start the game
 startGame();
 
-// Spotify API
-createPlaylistIframe();
-
-function createPlaylistIframe() {
-  const playlistId = "5x9iRviSpvJv4rrHFT3WP0";
-  const iframe = document.createElement("iframe");
-  iframe.title = "Spotify Embed: Recommendation Playlist";
-  iframe.src = `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`;
-  iframe.width = "100%";
-  iframe.height = "100%";
-  iframe.style.minHeight = "360px";
-  iframe.frameBorder = "0";
-  iframe.allow =
-    "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-  iframe.loading = "lazy";
-
-  const playlistContainer = document.getElementById("playlist-container");
-  playlistContainer.appendChild(iframe);
-}
