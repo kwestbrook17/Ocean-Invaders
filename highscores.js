@@ -13,3 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     highScoresList.appendChild(listItem);
   });
 });
+
+//clearing the list
+function clearLocalStorage() {
+    localStorage.clear();
+    }
+
+// Add event listener to the clear button
+const clearButton = document.getElementById("clearButton");
+clearButton.addEventListener("click", clearLocalStorage);
