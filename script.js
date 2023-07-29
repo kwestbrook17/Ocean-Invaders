@@ -71,32 +71,39 @@ function displayGameOver() {
         window.location.href = "level2/level2.html";
       }, 2000); // 2 seconds
     } else {
-      // Draw the input initials field on the canvas
-      ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
-      ctx.fillRect(
-        canvas.width / 4,
-        canvas.height / 2 - 40,
-        canvas.width / 2,
-        80
-      );
+  // Get the reference to the initials input field using its ID
+const initialsInput = document.getElementById("initialsInput");
 
-      ctx.font = "30px Arial";
-      ctx.fillStyle = "black";
-      ctx.textAlign = "center";
-      ctx.fillText("Enter Initials:", canvas.width / 2, canvas.height / 2);
+// Calculate the position for the initials input field
+const inputTop = canvas.height / 2 - initialsInput.offsetHeight / 2;
+const inputLeft = canvas.width / 2 - initialsInput.offsetWidth / 2;
 
-      const initialsInput = document.getElementById("initialsInput");
-      initialsInput.style.display = "block";
-      initialsInput.style.position = "absolute";
-      initialsInput.style.top = canvas.height / 2 + 5 + "px";
-      initialsInput.style.left = canvas.width / 2 + 70 + "px";
+// Set the display and position styles for the initials input field
+initialsInput.style.display = "block";
+initialsInput.style.position = "absolute";
+initialsInput.style.top = inputTop + "px";
+initialsInput.style.left = inputLeft + "px";
+initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
+initialsInput.style.color = "white";
 
-      const saveButton = document.querySelector(".initial");
-      saveButton.style.display = "block";
-      saveButton.style.position = "absolute";
-      saveButton.style.top = canvas.height / 2 + 5 + "px";
-      saveButton.style.left =
-        canvas.width / 2 + 70 + initialsInput.offsetWidth + 10 + "px";
+
+// Create the save button
+const saveButton = document.querySelector(".initial");
+
+// Calculate the position for the save button
+const buttonTop = inputTop + initialsInput.offsetHeight + 10;
+const buttonLeft = canvas.width / 2 - saveButton.offsetWidth / 2;
+
+// Set the display and position styles for the save button
+saveButton.style.display = "block";
+saveButton.style.position = "absolute";
+saveButton.style.top = buttonTop + "px";
+saveButton.style.left = buttonLeft + "px";
+saveButton.style.backgroundColor = "green"; // Set the background color to green
+saveButton.style.color = "white"; // Set the text color to white
+
+      
+      
       saveButton.addEventListener("click", saveData);
     }
   }
