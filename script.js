@@ -4,6 +4,7 @@ import Player from "./Player.js";
 import BulletController from "./BulletController.js";
 
 const canvas = document.getElementById("game");
+const restartBtn = document.getElementById("restart")
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2-dimensional drawings)
 const ctx = canvas.getContext("2d");
 
@@ -13,7 +14,7 @@ canvas.height = 600;
 
 const background = new Image();
 // sets the background for the canvas
-background.src = "assets/images/ocean-background.jpg";
+background.src = "assets/images/pixelBackground.png";
 
 // 10 references maximum bullets per screen
 // red is the color of the bullets
@@ -73,6 +74,7 @@ function displayGameOver() {
     } else {
       // Get the reference to the initials input field using its ID
       const initialsInput = document.getElementById("initialsInput");
+      restartBtn.style.display = 'block'
 
       // Calculate the position for the initials input field
       const inputTop = canvas.height / 2 - initialsInput.offsetHeight / 2;
@@ -159,4 +161,8 @@ function startGame() {
 
 // Call the startGame function to start the game
 startGame();
+
+restartBtn.addEventListener("click", () => {
+location.reload();
+});
 

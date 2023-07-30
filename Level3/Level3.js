@@ -13,7 +13,7 @@ canvas.height = 600;
 
 const background = new Image();
 // sets background for canvas
-background.src = "../assets/images/ocean-background.jpg";
+background.src = "../assets/images/pixelOcean2.png";
 
 // 10 refereneces maximum bullets per screen
 //red is the color of the bullets
