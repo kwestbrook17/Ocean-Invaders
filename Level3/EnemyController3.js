@@ -23,6 +23,7 @@ export default class EnemyController {
   moveDownTimer = this.moveDownTimerDefault;
   fireBulletTimerDefault = 80;
   fireBulletTimer = this.fireBulletTimerDefault;
+  highestRow = this.enemyMap[this.enemyMap.length - 1];
 
   // this gives the enemies the same parameters as the canvas
   constructor(canvas, enemyBulletController, playerBulletController) {

@@ -133,6 +133,10 @@ function checkGameOver() {
     isGameOver = true;
   }
 
+  if(enemyController.highestRow.y <= canvas.height){
+    isGameOver = true;
+  }
+
   // to change levels
   if (enemyController.enemyRows.length === 0) {
     didWin = true;
