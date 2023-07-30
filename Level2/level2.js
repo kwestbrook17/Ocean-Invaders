@@ -4,6 +4,8 @@ import Player from "./Player2.js";
 import BulletController from "./BulletController2.js";
 
 const canvas = document.getElementById("game");
+const restartBtn = document.getElementById("restart")
+const menuBtn = document.getElementById("menu")
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2 demensional drawings)
 const ctx = canvas.getContext("2d");
 
@@ -48,8 +50,9 @@ function displayGameOver() {
     let textOffset = didWin ? 3.5 : 5;
 
     ctx.fillStyle = "white";
-    ctx.font = "70px Arial";
+    ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
+    restartBtn.style.display = 'block'
     if (didWin) {
       setTimeout(() => {
         window.location.href = "../level3/level3.html";
@@ -80,22 +83,9 @@ function checkGameOver() {
 //this interval makes the game fucntion execute 60 times every sec (60fps)
 setInterval(game, 1000 / 60);
 
-// Spotify API
-createPlaylistIframe();
-
-function createPlaylistIframe() {
-  const playlistId = "5x9iRviSpvJv4rrHFT3WP0";
-  const iframe = document.createElement("iframe");
-  iframe.title = "Spotify Embed: Recommendation Playlist";
-  iframe.src = `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`;
-  iframe.width = "100%";
-  iframe.height = "100%";
-  iframe.style.minHeight = "360px";
-  iframe.frameBorder = "0";
-  iframe.allow =
-    "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-  iframe.loading = "lazy";
-
-  const playlistContainer = document.getElementById("playlist-container");
-  playlistContainer.appendChild(iframe);
-}
+restartBtn.addEventListener("click", () => {
+  location.href = '../game.html';
+  });
+  menuBtn.addEventListener("click", ()=>{
+    location.href = "../index.html"
+  })

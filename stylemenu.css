@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "pixel";
+  src: url("assets/fonts/Pixel/PublicPixel.ttf");
+}
+
+@font-face {
+  font-family: "broken";
+  src: url("assets/fonts/BrokenConsole/Broken\ Console\ Regular.ttf")
+      format("woff"),
+    url("assets/fonts/BrokenConsole/Broken\ Console\ Bold\ Shadow.ttf")
+      format("woff"),
+    url("assets/fonts/BrokenConsole/Broken\ Console\ Bold.ttf")
+      format("woff");
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +22,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #111111;
-  font-family: "Press Start 2P", cursive; /* If using an arcade-like font */
+  font-family: "broken", "Press Start 2P"; /* If using an arcade-like font */
 }
 
 h1 {
@@ -28,11 +44,17 @@ h1 {
 }
 
 #arcade-menu a:hover {
-  background-color: #fff;
-  color: #111;
+  background-color: transparent;
+  color: #9c01d0;
+}
+
+#arcade-menu #Music:hover {
+  background-color: transparent;
+  color: #9c01d0;
 }
 
 #Music {
 cursor: pointer;
 display: inline-block;
+padding-top: 1rem;
 }

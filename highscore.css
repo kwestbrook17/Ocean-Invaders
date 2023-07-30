@@ -1,4 +1,18 @@
 /* highscoresstyles.css */
+@font-face {
+  font-family: "pixel";
+  src: url("assets/fonts/Pixel/PublicPixel.ttf");
+}
+
+@font-face {
+  font-family: "broken";
+  src: url("assets/fonts/BrokenConsole/Broken\ Console\ Regular.ttf")
+      format("woff"),
+    url("assets/fonts/BrokenConsole/Broken\ Console\ Bold\ Shadow.ttf")
+      format("woff"),
+    url("assets/fonts/BrokenConsole/Broken\ Console\ Bold.ttf")
+      format("woff");
+}
 
 body {
   margin: 0;
@@ -8,14 +22,15 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #111111;
-  font-family: "Press Start 2P", cursive; /* If using an arcade-like font */
 }
 
 h1 {
+  font-family: "broken";
   color: #000000;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 20px;
+  border-bottom: solid white 4px;
 }
 
 main {
@@ -23,7 +38,6 @@ main {
   border: 3px solid #fff;
   border-radius: 10px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
@@ -37,26 +51,30 @@ a {
 }
 
 a:hover {
-  background-color: #fff;
-  color: #111;
+  background-color: transparent;
 }
 
-button {
+#clearButton, .menu {
+  font-family: 'pixel';
   display: block;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  margin: 20px auto;
-  background-color: #fff;
+  font-size: 1.5rem;
+  background-color: transparent;
   color: #111;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
+}
+
+#clearButton {
+  padding-top: 5px;
+  display: inline-block;
+  border-top: solid rgb(255, 255, 255) 4px;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-family: 'pixel';
 }
 
 li {
