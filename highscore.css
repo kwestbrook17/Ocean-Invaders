@@ -31,6 +31,7 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   border-bottom: solid white 4px;
+  
 }
 
 main {
@@ -70,14 +71,32 @@ a:hover {
   border-top: solid rgb(255, 255, 255) 4px;
 }
 
+#clearButton:hover {
+  background-color: transparent;
+  color: #9c01d0;
+}
+
+.menu:hover {
+  background-color: transparent;
+  color: #9c01d0;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-family: 'pixel';
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 li {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  padding: 10px;
+  width: 70%;
+  background-color: rgb(66, 55, 195);
+  border-radius: 10px;
 }
