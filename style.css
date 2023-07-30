@@ -26,3 +26,32 @@ body {
 .hidden {
   display: none;
 }
+
+.Btns {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container {
+  display: flex;
+justify-content: center;
+}
+
+.restart-container {
+display: flex;
+justify-content: center;
+}
+
+.restartBtn {
+  margin-top: 10px;
+  width: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.menuBtn {
+  margin-top: 10px;
+  width: 49%;
+  cursor: pointer;
+}

@@ -14,7 +14,7 @@ export default class Player {
     this.width = 70;
     this.height = 68;
     this.image = new Image();
-    this.image.src = "assets/images/playerNoMotion.png";
+    this.image.src = "assets/images/playerMotion.gif";
 
     document.addEventListener("keydown", this.keydown);
     document.addEventListener("keyup", this.keyup); 
