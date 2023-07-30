@@ -117,13 +117,8 @@ function displayGameOver() {
 }
 
 // Function to update the player's score
-function updateScore() {
-  const scoreElement = document.getElementById("score");
-  scoreElement.style.display = "block";
-  scoreElement.innerText = `Your Score: ${playerScore}`;
-}
-
-// Function to check if the game is over
+//
+ // Function to check if the game is over
 function checkGameOver() {
   if (isGameOver) {
     return;

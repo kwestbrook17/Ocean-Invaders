@@ -72,45 +72,7 @@ function displayGameOver() {
       setTimeout(() => {
         window.location.href = "level2/level2.html";
       }, 2000); // 2 seconds
-    } else {
-      // Get the reference to the initials input field using its ID
-      const initialsInput = document.getElementById("initialsInput");
-      restartBtn.style.display = 'block'
-
-       // Calculate the position for the initials input field in the middle of the screen
-      const inputTop = window.innerHeight / 2 - initialsInput.offsetHeight / 2;
-      const inputLeft = window.innerWidth / 2 - initialsInput.offsetWidth / 2;
-
-      // Set the display and position styles for the initials input field
-      initialsInput.style.display = "block";
-      initialsInput.style.position = "absolute";
-      initialsInput.style.top = inputTop + "px";
-      initialsInput.style.left = inputLeft + "px";
-      initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
-      initialsInput.style.color = "white";
-      initialsInput.style.fontFamily = "pixel, sans-serif";
-      // Set a higher z-index so the input field is on top of the canvas
-      canvas.style.zIndex = "0";
-
-      // Create the save button
-      const saveButton = document.querySelector(".initial");
-
-      // Calculate the position for the save button just below the input field
-      const buttonTop = inputTop + initialsInput.offsetHeight + 10;
-      const buttonLeft = window.innerWidth / 2 - saveButton.offsetWidth / 2;
-
-      // Set the display and position styles for the save button
-      saveButton.style.display = "block";
-      saveButton.style.position = "absolute";
-      saveButton.style.top = buttonTop + "px";
-      saveButton.style.left = buttonLeft + "px";
-      saveButton.style.backgroundColor = "blue"; // Set the background color to green
-      saveButton.style.color = "white"; // Set the text color to white
-      saveButton.style.fontFamily = "pixel, sans-serif";
-
-
-
-      saveButton.addEventListener("click", saveData);
+  
     }
   }
 }
