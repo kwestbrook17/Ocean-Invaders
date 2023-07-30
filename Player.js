@@ -17,7 +17,14 @@ export default class Player {
     this.image.src = "assets/images/playerNoMotion.png";
 
     document.addEventListener("keydown", this.keydown);
-    document.addEventListener("keyup", this.keyup);
+    document.addEventListener("keyup", this.keyup); 
+    document.addEventListener('keydown', function(event) {
+      // Check if the pressed key is the spacebar (key code: 32)
+      if (event.keyCode === 32) {
+        // Prevent the default action of the spacebar (scrolling down the page)
+        event.preventDefault();
+      }
+    });
   }
 
   draw(ctx) {

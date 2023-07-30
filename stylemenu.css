@@ -10,10 +10,10 @@ body {
 }
 
 h1 {
-  color: #000000;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 20px;
+  border-bottom: black 3px solid;
 }
 
 #arcade-menu {
@@ -21,21 +21,18 @@ h1 {
   border: 3px solid #fff;
   border-radius: 10px;
   padding: 20px;
+  font-weight: 900;
   background-color: rgba(0, 0, 0, 0.7);
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
 }
 
-#arcade-menu a {
-  display: block;
-  color: #000000;
-  font-size: 1.5rem;
-  text-decoration: none;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
 #arcade-menu a:hover {
   background-color: #fff;
   color: #111;
+}
+
+#Music {
+cursor: pointer;
+display: inline-block;
 }
