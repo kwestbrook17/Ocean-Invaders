@@ -4,7 +4,8 @@ import Player from "./Player.js";
 import BulletController from "./BulletController.js";
 
 const canvas = document.getElementById("game");
-const restartBtn = document.getElementById("restart")
+const restartBtn = document.getElementById("restart");
+const menuBtn = document.getElementById("menu");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2-dimensional drawings)
 const ctx = canvas.getContext("2d");
 
@@ -64,7 +65,7 @@ function displayGameOver() {
     let textOffset = didWin ? 3.5 : 5;
 
     ctx.fillStyle = "white";
-    ctx.font = "70px Arial";
+    ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
 
     if (didWin) {
@@ -165,4 +166,7 @@ startGame();
 restartBtn.addEventListener("click", () => {
 location.reload();
 });
+menuBtn.addEventListener("click", ()=>{
+  location.href = "index.html"
+})
 
