@@ -1,7 +1,7 @@
 // This controller allows for the modules of js to be imported and used
-import EnemyController from "./level2EnemyController.js";
-import Player from "./Player2.js";
-import BulletController from "./BulletController2.js";
+import EnemyController from "./EnemyController3.js";
+import Player from "./Player3.js";
+import BulletController from "./BulletController3.js";
 
 const canvas = document.getElementById("game");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2 demensional drawings)
@@ -52,7 +52,7 @@ function displayGameOver() {
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
     if (didWin) {
       setTimeout(() => {
-        window.location.href = "../level3/level3.html";
+        window.location.href = "level2/level2.html";
       }, 2000); // 2 seconds
     }
   }

@@ -6,10 +6,10 @@ export default class EnemyController {
   enemyMap = [
     [0, 1, 1, 1, 0, 0, 1, 1, 1, 0],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [2, 2, 2, 3, 3, 3, 3, 2, 2, 2],
-    [2, 2, 2, 3, 3, 3, 3, 2, 2, 2],
-    [3, 3, 3, 2, 2, 2, 2, 3, 3, 3],
+    [2, 2, 2, 4, 4, 4, 4, 2, 2, 2],
+    [2, 2, 2, 4, 4, 4, 4, 2, 2, 2],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
   ];
 
   enemyRows = [];
@@ -17,11 +17,11 @@ export default class EnemyController {
   currentDirection = MovingDirection.right;
   xVelocity = 0;
   yVelocity = 0;
-  defaultXVelocity = 1.2;
-  defaultYVelocity = 1.2;
+  defaultXVelocity = 1.1;
+  defaultYVelocity = 1.1;
   moveDownTimerDefault = 30;
   moveDownTimer = this.moveDownTimerDefault;
-  fireBulletTimerDefault = 100;
+  fireBulletTimerDefault = 90;
   fireBulletTimer = this.fireBulletTimerDefault;
 
   // this gives the enemies the same parameters as the canvas
@@ -31,7 +31,7 @@ export default class EnemyController {
     this.playerBulletController = playerBulletController;
 
     this.enemyDeathSound = new Audio("../assets/sounds/enemy-death.wav");
-    this.enemyDeathSound.volume = 0.5;
+    this.enemyDeathSound.volume = 0.2;
 
     this.createEnemies();
   }
