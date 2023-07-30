@@ -58,6 +58,8 @@ function getPlayerInitials() {
 }
 
 // Function to display game over and high scores
+// Function to display game over and high scores
+// Function to display game over and high scores
 function displayGameOver() {
   if (isGameOver) {
     getPlayerInitials(); // Retrieve the player's initials from local storage
@@ -69,17 +71,13 @@ function displayGameOver() {
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
 
     if (didWin) {
-      setTimeout(() => {
-        window.location.href = "level2/level2.html";
-      }, 2000); // 2 seconds
-    } else {
-      // Get the reference to the initials input field using its ID
+      // Display the initials input field and save button only if the player won
       const initialsInput = document.getElementById("initialsInput");
-      restartBtn.style.display = 'block'
+      restartBtn.style.display = 'block';
 
-      // Calculate the position for the initials input field
-      const inputTop = canvas.height / 2 - initialsInput.offsetHeight / 2;
-      const inputLeft = canvas.width / 2 - initialsInput.offsetWidth / 2;
+      // Calculate the position for the initials input field in the middle of the screen
+      const inputTop = window.innerHeight / 2 - initialsInput.offsetHeight / 2;
+      const inputLeft = window.innerWidth / 2 - initialsInput.offsetWidth / 2;
 
       // Set the display and position styles for the initials input field
       initialsInput.style.display = "block";
@@ -88,26 +86,32 @@ function displayGameOver() {
       initialsInput.style.left = inputLeft + "px";
       initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
       initialsInput.style.color = "white";
-
-
+      initialsInput.style.fontFamily = "pixel, sans-serif";
       // Create the save button
       const saveButton = document.querySelector(".initial");
 
-      // Calculate the position for the save button
+      // Calculate the position for the save button just below the input field
       const buttonTop = inputTop + initialsInput.offsetHeight + 10;
-      const buttonLeft = canvas.width / 2 - saveButton.offsetWidth / 2;
+      const buttonLeft = window.innerWidth / 2 - saveButton.offsetWidth / 2;
+
 
       // Set the display and position styles for the save button
       saveButton.style.display = "block";
       saveButton.style.position = "absolute";
       saveButton.style.top = buttonTop + "px";
       saveButton.style.left = buttonLeft + "px";
-      saveButton.style.backgroundColor = "green"; // Set the background color to green
+      saveButton.style.backgroundColor = "blue"; 
       saveButton.style.color = "white"; // Set the text color to white
-
-
+      saveButton.style.fontFamily = "pixel, sans-serif";
 
       saveButton.addEventListener("click", saveData);
+    } else {
+      // Player did not win, remove the initials input field and save button
+      const initialsInput = document.getElementById("initialsInput");
+      initialsInput.style.display = "none";
+
+      const saveButton = document.querySelector(".initial");
+      saveButton.style.display = "none";
     }
   }
 }
