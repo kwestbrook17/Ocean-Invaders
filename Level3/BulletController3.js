@@ -1,4 +1,4 @@
-import Bullet from "./Bullet2.js";
+import Bullet from "./Bullet3.js";
 
 export default class BulletController {
   bullets = [];

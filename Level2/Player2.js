@@ -24,7 +24,7 @@ export default class Player {
         // Prevent the default action of the spacebar (scrolling down the page)
         event.preventDefault();
       }
-    });
+    }); 
   }
 
   draw(ctx) {

@@ -12,7 +12,7 @@ export default class BulletController {
 
     // Selects sound for player shoots
     this.shootSound = new Audio("assets/sounds/shoot.wav");
-    this.shootSound.volume = 0.5;
+    this.shootSound.volume = 0.2;
   }
 
   draw(ctx) {

@@ -1,15 +1,15 @@
-import Enemy from "./Enemy.js";
-import MovingDirection from "./MovingDirection.js";
+import Enemy from "./Enemy3.js";
+import MovingDirection from "./MovingDirection3.js";
 
 export default class EnemyController {
   // represents the pattern for enemies and the different numbers are the different enemies
   enemyMap = [
-    [0, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [2, 2, 2, 3, 3, 3, 3, 2, 2, 2],
-    [2, 2, 2, 3, 3, 3, 3, 2, 2, 2],
-    [1, 2, 1, 1, 2, 1, 2, 1, 2, 1],
+    [0, 2, 2, 2, 0, 0, 2, 2, 2, 0],
+    [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+    [4, 4, 4, 5, 5, 5, 5, 4, 4, 4],
+    [3, 3, 3, 5, 5, 5, 5, 3, 3, 3],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    [0, 0, 0, 3, 3, 3, 3, 0, 0, 0],
   ];
 
   enemyRows = [];
@@ -17,11 +17,11 @@ export default class EnemyController {
   currentDirection = MovingDirection.right;
   xVelocity = 0;
   yVelocity = 0;
-  defaultXVelocity = 1;
-  defaultYVelocity = 1;
+  defaultXVelocity = 1.1;
+  defaultYVelocity = 1.1;
   moveDownTimerDefault = 30;
   moveDownTimer = this.moveDownTimerDefault;
-  fireBulletTimerDefault = 100;
+  fireBulletTimerDefault = 80;
   fireBulletTimer = this.fireBulletTimerDefault;
 
   // this gives the enemies the same parameters as the canvas
@@ -30,7 +30,7 @@ export default class EnemyController {
     this.enemyBulletController = enemyBulletController;
     this.playerBulletController = playerBulletController;
 
-    this.enemyDeathSound = new Audio("assets/sounds/enemy-death.wav");
+    this.enemyDeathSound = new Audio("../assets/sounds/enemy-death.wav");
     this.enemyDeathSound.volume = 0.2;
 
     this.createEnemies();
