@@ -35,7 +35,7 @@ const enemyController = new EnemyController(
 const player = new Player(canvas, 3, playerBulletController);
 
 let isGameOver = false;
-let didWin = false;
+let didWin = true;
 
 function game() {
   checkGameOver();
@@ -57,10 +57,12 @@ function displayGameOver() {
     ctx.fillStyle = "white";
     ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-    restartBtn.style.display = "block";
+    if (isGameOver && !didWin) {
+      restartBtn.style.display = "block";
+    }
     if (didWin) {
       setTimeout(() => {
-        window.location.href = "level2/level2.html";
+        window.location.href = "../level4/level4.html";
       }, 2000); // 2 seconds
     }
   }
