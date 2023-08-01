@@ -41,7 +41,6 @@ let playerScore = 0;
 // Function to display game over and high scores
 function displayGameOver() {
   if (isGameOver) {
-    getPlayerInitials(); // Retrieve the player's initials from local storage
     let text = didWin ? "You Win" : "Game Over";
     let textOffset = didWin ? 3.5 : 5;
 
