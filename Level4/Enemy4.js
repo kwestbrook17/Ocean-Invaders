@@ -2,8 +2,13 @@ export default class Enemy {
   constructor(x, y, imageNumber) {
     this.x = x;
     this.y = y;
-    this.width = 44; // make these the same as the image dimensions
-    this.height = 32; // make these the same as the image dimensions
+    if (window.innerWidth <= 650) {
+      this.width = 24; // make these the same as the image dimensions
+      this.height = 16; // make these the same as the image dimensions
+    } else {
+      this.width = 44; // make these the same as the image dimensions
+      this.height = 32; // make these the same as the image dimensions
+    }
 
     this.image = new Image();
     // need to put numbers on images we use for the enemys

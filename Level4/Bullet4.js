@@ -7,8 +7,13 @@ export default class Bullet {
     this.bulletColor = bulletColor;
 
     //shape of bullet
-    this.width = 5;
-    this.height = 20;
+    if (window.innerWidth <= 650) {
+      this.width = 3;
+      this.height = 15;
+    } else {
+      this.width = 5;
+      this.height = 20;
+    }
   }
 
   draw(ctx) {

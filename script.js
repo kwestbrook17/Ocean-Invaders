@@ -9,9 +9,20 @@ const menuBtn = document.getElementById("menu");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2-dimensional drawings)
 const ctx = canvas.getContext("2d");
 
-//sets the size of canvas
-canvas.width = 600;
-canvas.height = 600;
+function checkWindowWidth() {
+  if (window.innerWidth <= 650) {
+    console.log("Window width is 600 pixels or less.");
+    canvas.width = 400;
+    canvas.height = 400;
+  } else {
+    canvas.width = 600;
+    canvas.height = 600;
+    console.log("Window width is greater than 600 pixels.");
+  }
+}
+
+// Check window width when the page loads
+checkWindowWidth();
 
 const background = new Image();
 // sets the background for the canvas
@@ -45,7 +56,11 @@ function displayGameOver() {
     let textOffset = didWin ? 3.5 : 5;
 
     ctx.fillStyle = "white";
-    ctx.font = "44px pixel";
+    if (window.innerWidth <= 650) {
+      ctx.font = "30px pixel";
+    } else {
+      ctx.font = "44px pixel";
+    }
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
     if (isGameOver && !didWin) {
       restartBtn.style.display = "block";
@@ -111,3 +126,4 @@ restartBtn.addEventListener("click", () => {
 menuBtn.addEventListener("click", () => {
   location.href = "index.html";
 });
+window.addEventListener("resize", checkWindowWidth);
