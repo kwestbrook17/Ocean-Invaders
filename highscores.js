@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Display the high scores in the list
   highScores.forEach((entry) => {
     const listItem = document.createElement("li");
-    listItem.innerText = `${entry.initials}: ${entry.score}`;
+    listItem.innerText = `${entry.initials}`;
     highScoresList.appendChild(listItem);
   });
 });
