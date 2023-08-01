@@ -75,15 +75,14 @@ function displayGameOver() {
     } else {
       // Get the reference to the initials input field using its ID
       const initialsInput = document.getElementById("initialsInput");
-      restartBtn.style.display = 'block'
+      restartBtn.style.display = "block";
 
-       // Calculate the position for the initials input field in the middle of the screen
+      // Calculate the position for the initials input field in the middle of the screen
       const inputTop = window.innerHeight / 2 - initialsInput.offsetHeight / 2;
       const inputLeft = window.innerWidth / 2 - initialsInput.offsetWidth / 2;
 
       // Set the display and position styles for the initials input field
       initialsInput.style.display = "block";
-      initialsInput.style.position = "absolute";
       initialsInput.style.top = inputTop + "px";
       initialsInput.style.left = inputLeft + "px";
       initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
@@ -101,14 +100,11 @@ function displayGameOver() {
 
       // Set the display and position styles for the save button
       saveButton.style.display = "block";
-      saveButton.style.position = "absolute";
       saveButton.style.top = buttonTop + "px";
       saveButton.style.left = buttonLeft + "px";
       saveButton.style.backgroundColor = "blue"; // Set the background color to green
       saveButton.style.color = "white"; // Set the text color to white
       saveButton.style.fontFamily = "pixel, sans-serif";
-
-
 
       saveButton.addEventListener("click", saveData);
     }
@@ -136,7 +132,7 @@ function checkGameOver() {
     isGameOver = true;
   }
 
-  if(enemyController.highestRow.y <= canvas.height){
+  if (enemyController.highestRow.y <= canvas.height) {
     isGameOver = true;
   }
 
@@ -174,5 +170,5 @@ restartBtn.addEventListener("click", () => {
   location.reload();
 });
 menuBtn.addEventListener("click", () => {
-  location.href = "index.html"
-})
+  location.href = "index.html";
+});

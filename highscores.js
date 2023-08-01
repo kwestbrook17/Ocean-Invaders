@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Display the high scores in the list
   highScores.forEach((entry) => {
     const listItem = document.createElement("li");
-    listItem.innerText = `${entry.initials}: ${entry.score}`;
+    listItem.innerText = `${entry.initials}`;
     highScoresList.appendChild(listItem);
   });
 });
 
 //clearing the list
 function clearLocalStorage() {
-    localStorage.clear();
-    location.reload()
-    }
+  localStorage.clear();
+  location.reload();
+}
 
 // Add event listener to the clear button
 const clearButton = document.getElementById("clearButton");

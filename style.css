@@ -9,24 +9,22 @@
       format("woff"),
     url("assets/fonts/BrokenConsole/Broken\ Console\ Bold\ Shadow.ttf")
       format("woff"),
-    url("assets/fonts/BrokenConsole/Broken\ Console\ Bold.ttf")
-      format("woff");
+    url("assets/fonts/BrokenConsole/Broken\ Console\ Bold.ttf") format("woff");
 }
 
 canvas {
-  box-shadow: black 20px 10px 50px;
+  box-shadow: rgb(0, 27, 125) 20px 10px 50px;
 }
 
 h1 {
-  font-family: 'broken';
+  font-family: "broken";
   margin-top: 10px;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, #87CEEB, #00008B);
+  background: linear-gradient(90deg, #87ceeb, #00008b);
   background-clip: text;
   -webkit-background-clip: text; /* For Safari */
   color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 94, 246, 0.8);
-  
 }
 
 body {
@@ -58,12 +56,12 @@ body {
 
 .menu-container {
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
 .restart-container {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .restartBtn {
@@ -77,4 +75,10 @@ justify-content: center;
   margin-top: 10px;
   width: 49%;
   cursor: pointer;
+}
+
+#user-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
