@@ -18,8 +18,18 @@ background.src = "../assets/images/pixelBackground.png";
 // 10 references maximum bullets per screen
 // red is the color of the bullets
 // true references the sound
-const playerBulletController = new BulletController(canvas, 10, "red", true);
-const enemyBulletController = new BulletController(canvas, 4, "white", false);
+const playerBulletController = new BulletController(
+  canvas,
+  10,
+  "rgb(0, 255, 0)",
+  true
+);
+const enemyBulletController = new BulletController(
+  canvas,
+  4,
+  "rgb(255, 255, 0)",
+  false
+);
 const enemyController = new EnemyController(
   canvas,
   enemyBulletController,

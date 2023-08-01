@@ -1,7 +1,7 @@
 // This controller allows for the modules of js to be imported and used
-import EnemyController from "./EnemyController.js";
-import Player from "./Player.js";
-import BulletController from "./BulletController.js";
+import EnemyController from "../Level4/EnemyController4.js";
+import Player from "../Level4/Player4.js";
+import BulletController from "../Level4/BulletController4.js";
 
 const canvas = document.getElementById("game");
 const restartBtn = document.getElementById("restart");
@@ -15,7 +15,7 @@ canvas.height = 600;
 
 const background = new Image();
 // sets the background for the canvas
-background.src = "assets/images/pixelBackground.png";
+background.src = "../assets/images/background4.png";
 
 // 10 references maximum bullets per screen
 // red is the color of the bullets
@@ -41,17 +41,17 @@ let playerScore = 0;
 // Function to display game over and high scores
 function displayGameOver() {
   if (isGameOver) {
-    getPlayerInitials(); // Retrieve the player's initials from local storage
     let text = didWin ? "You Win" : "Game Over";
     let textOffset = didWin ? 3.5 : 5;
 
     ctx.fillStyle = "white";
     ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-
+    restartBtn.style.display = "block";
     if (didWin) {
+      restartBtn.style.display = "none";
       setTimeout(() => {
-        window.location.href = "level2/level2.html";
+        window.location.href = "../level5/level5.html";
       }, 2000); // 2 seconds
     }
   }
@@ -105,8 +105,8 @@ function startGame() {
 startGame();
 
 restartBtn.addEventListener("click", () => {
-  location.reload();
+  location.href = "../game.html";
 });
 menuBtn.addEventListener("click", () => {
-  location.href = "index.html";
+  location.href = "../index.html";
 });

@@ -4,8 +4,8 @@ import Player from "./Player2.js";
 import BulletController from "./BulletController2.js";
 
 const canvas = document.getElementById("game");
-const restartBtn = document.getElementById("restart")
-const menuBtn = document.getElementById("menu")
+const restartBtn = document.getElementById("restart");
+const menuBtn = document.getElementById("menu");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2 demensional drawings)
 const ctx = canvas.getContext("2d");
 
@@ -20,8 +20,13 @@ background.src = "../assets/images/pixelOcean.png";
 // 10 refereneces maximum bullets per screen
 //red is the color of the bullets
 //true references the sound
-const playerBulletController = new BulletController(canvas, 10, "red", true);
-const enemyBulletController = new BulletController(canvas, 4, "white", false);
+const playerBulletController = new BulletController(
+  canvas,
+  10,
+  "rgb(0, 255, 0)",
+  true
+);
+const enemyBulletController = new BulletController(canvas, 4, "red", false);
 const enemyController = new EnemyController(
   canvas,
   enemyBulletController,
@@ -52,7 +57,7 @@ function displayGameOver() {
     ctx.fillStyle = "white";
     ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-    restartBtn.style.display = 'block'
+    restartBtn.style.display = "block";
     if (didWin) {
       setTimeout(() => {
         window.location.href = "../level3/level3.html";
@@ -74,7 +79,7 @@ function checkGameOver() {
     isGameOver = true;
   }
 
-  if(enemyController.highestRow.y <= canvas.height){
+  if (enemyController.highestRow.y <= canvas.height) {
     isGameOver = true;
   }
 
@@ -88,8 +93,8 @@ function checkGameOver() {
 setInterval(game, 1000 / 60);
 
 restartBtn.addEventListener("click", () => {
-  location.href = '../game.html';
-  });
-  menuBtn.addEventListener("click", ()=>{
-    location.href = "../index.html"
-  })
+  location.href = "../game.html";
+});
+menuBtn.addEventListener("click", () => {
+  location.href = "../index.html";
+});

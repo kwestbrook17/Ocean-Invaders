@@ -20,8 +20,13 @@ background.src = "../assets/images/pixelOcean2.png";
 // 10 refereneces maximum bullets per screen
 //red is the color of the bullets
 //true references the sound
-const playerBulletController = new BulletController(canvas, 10, "red", true);
-const enemyBulletController = new BulletController(canvas, 4, "white", false);
+const playerBulletController = new BulletController(
+  canvas,
+  10,
+  "rgb(0, 255, 0)",
+  true
+);
+const enemyBulletController = new BulletController(canvas, 4, "red", false);
 const enemyController = new EnemyController(
   canvas,
   enemyBulletController,
@@ -52,7 +57,7 @@ function displayGameOver() {
     ctx.fillStyle = "white";
     ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-    restartBtn.style.display = 'block'
+    restartBtn.style.display = "block";
     if (didWin) {
       setTimeout(() => {
         window.location.href = "level2/level2.html";
@@ -74,7 +79,7 @@ function checkGameOver() {
     isGameOver = true;
   }
 
-  if(enemyController.highestRow.y <= canvas.height){
+  if (enemyController.highestRow.y <= canvas.height) {
     isGameOver = true;
   }
 
@@ -89,7 +94,7 @@ setInterval(game, 1000 / 60);
 
 restartBtn.addEventListener("click", () => {
   location.href = "../game.html";
-  });
-  menuBtn.addEventListener("click", ()=>{
-    location.href = "../index.html"
-  })
+});
+menuBtn.addEventListener("click", () => {
+  location.href = "../index.html";
+});
