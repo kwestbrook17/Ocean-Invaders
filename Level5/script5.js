@@ -85,7 +85,7 @@ function displayGameOver() {
       const inputLeft = window.innerWidth / 2 - initialsInput.offsetWidth / 2;
 
       // Set the display and position styles for the initials input field
-      initialsInput.style.display = "block";
+      initialsInput.classList.remove("hidden");
       initialsInput.style.top = inputTop + "px";
       initialsInput.style.left = inputLeft + "px";
       initialsInput.style.backgroundColor = "blue"; // Set the background color to blue
@@ -102,7 +102,7 @@ function displayGameOver() {
       const buttonLeft = window.innerWidth / 2 - saveButton.offsetWidth / 2;
 
       // Set the display and position styles for the save button
-      saveButton.style.display = "block";
+      saveButton.classList.remove("hidden");
       saveButton.style.top = buttonTop + "px";
       saveButton.style.left = buttonLeft + "px";
       saveButton.style.backgroundColor = "blue"; // Set the background color to green
