@@ -72,7 +72,6 @@ function displayGameOver() {
       setTimeout(() => {
         window.location.href = "level2/level2.html";
       }, 2000); // 2 seconds
-  
     }
   }
 }
@@ -98,7 +97,7 @@ function checkGameOver() {
     isGameOver = true;
   }
 
-  if(enemyController.highestRow.y <= canvas.height){
+  if (enemyController.highestRow.y <= canvas.height) {
     isGameOver = true;
   }
 
@@ -136,5 +135,5 @@ restartBtn.addEventListener("click", () => {
   location.reload();
 });
 menuBtn.addEventListener("click", () => {
-  location.href = "index.html"
-})
+  location.href = "index.html";
+});

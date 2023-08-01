@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //clearing the list
 function clearLocalStorage() {
-    localStorage.clear();
-    location.reload()
-    }
+  localStorage.clear();
+  location.reload();
+}
 
 // Add event listener to the clear button
 const clearButton = document.getElementById("clearButton");
