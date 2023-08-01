@@ -8,17 +8,25 @@ export default class Player {
     this.velocity = velocity;
     this.bulletController = bulletController;
 
-    this.x = this.canvas.width / 2;
-    this.y = this.canvas.height - 75;
     // set width and height to the height we set our player
-    this.width = 70;
-    this.height = 68;
+    if (window.innerWidth <= 650) {
+      this.x = this.canvas.width / 2.2;
+      this.y = this.canvas.height - 50;
+      this.width = 50;
+      this.height = 48;
+    } else {
+      this.x = this.canvas.width / 2.2;
+      this.y = this.canvas.height - 70;
+      this.width = 70;
+      this.height = 68;
+    }
+
     this.image = new Image();
     this.image.src = "assets/images/playerMotion.gif";
 
     document.addEventListener("keydown", this.keydown);
-    document.addEventListener("keyup", this.keyup); 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener("keyup", this.keyup);
+    document.addEventListener("keydown", function (event) {
       // Check if the pressed key is the spacebar (key code: 32)
       if (event.keyCode === 32) {
         // Prevent the default action of the spacebar (scrolling down the page)

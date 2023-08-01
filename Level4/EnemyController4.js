@@ -149,9 +149,17 @@ export default class EnemyController {
         // checks if there is an enemy (0 means no enemy)
         if (enemyNumber > 0) {
           // this puts enemy in row and determines space between them with * num
-          this.enemyRows[rowIndex].push(
-            new Enemy(enemyIndex * 50, rowIndex * 35, enemyNumber)
-          );
+          if (window.innerWidth <= 650) {
+            // Adjust position for narrower screens
+            this.enemyRows[rowIndex].push(
+              new Enemy(enemyIndex * 30, rowIndex * 25, enemyNumber)
+            );
+          } else {
+            // Use the regular position for wider screens
+            this.enemyRows[rowIndex].push(
+              new Enemy(enemyIndex * 50, rowIndex * 35, enemyNumber)
+            );
+          }
         }
       });
     });

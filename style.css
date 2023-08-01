@@ -48,6 +48,10 @@ body {
   display: none;
 }
 
+#save-initials {
+  cursor: pointer;
+}
+
 .Btns {
   align-items: center;
   display: flex;
