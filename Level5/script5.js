@@ -5,6 +5,7 @@ import BulletController from "../level5/BulletController5.js";
 
 const canvas = document.getElementById("game");
 const menuBtn = document.getElementById("menu");
+const restartBtn = document.getElementById("restart");
 // ctx allows you to draw and manipulate 2D graphics (you pass 2D as an argument for 2-dimensional drawings)
 const ctx = canvas.getContext("2d");
 
@@ -74,7 +75,9 @@ function displayGameOver() {
     ctx.fillStyle = "white";
     ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-
+    if (isGameOver && !didWin) {
+      restartBtn.style.display = "block";
+    }
     if (didWin) {
       // Get the reference to the initials input field using its ID
       const initialsInput = document.getElementById("initialsInput");
@@ -162,4 +165,7 @@ startGame();
 
 menuBtn.addEventListener("click", () => {
   location.href = "index.html";
+});
+restartBtn.addEventListener("click", () => {
+  location.href = "../game.html";
 });

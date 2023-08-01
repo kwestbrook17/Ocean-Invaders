@@ -47,9 +47,10 @@ function displayGameOver() {
     ctx.fillStyle = "white";
     ctx.font = "44px pixel";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
-    restartBtn.style.display = "block";
+    if (isGameOver && !didWin) {
+      restartBtn.style.display = "block";
+    }
     if (didWin) {
-      restartBtn.style.display = "none";
       setTimeout(() => {
         window.location.href = "../level5/level5.html";
       }, 2000); // 2 seconds
