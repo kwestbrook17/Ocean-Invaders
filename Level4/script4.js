@@ -68,7 +68,7 @@ function displayGameOver() {
     }
     if (didWin) {
       setTimeout(() => {
-        window.location.href = "../level5/level5.html";
+        window.location.href = "../Level5/level5.html";
       }, 2000); // 2 seconds
     }
   }
