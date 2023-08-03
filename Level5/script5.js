@@ -181,7 +181,7 @@ function startGame() {
 startGame();
 
 menuBtn.addEventListener("click", () => {
-  location.href = "index.html";
+  location.href = "../index.html";
 });
 restartBtn.addEventListener("click", () => {
   location.href = "../game.html";
