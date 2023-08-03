@@ -1,7 +1,7 @@
 // This controller allows for the modules of js to be imported and used
-import EnemyController from "../level5/EnemyController5.js";
-import Player from "../level5/Player5.js";
-import BulletController from "../level5/BulletController5.js";
+import EnemyController from "../Level5/EnemyController5.js";
+import Player from "../Level5/Player5.js";
+import BulletController from "../Level5/BulletController5.js";
 
 const canvas = document.getElementById("game");
 const menuBtn = document.getElementById("menu");
