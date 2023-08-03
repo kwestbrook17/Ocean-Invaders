@@ -8,7 +8,7 @@ function playMusicButtonClick() {
   playMusicButton.addEventListener("click", async () => {
     try {
       // Search on youtube
-      const searchQuery = "arcade music";
+      const searchQuery = "retro arcade music";
 
       const response = await fetch(
         `https://www.googleapis.com/youtube/v3/search?key=${youtubeApiKey}&q=${searchQuery}&type=video&part=snippet&maxResults=1`
