@@ -1,5 +1,5 @@
 fetch(
-  "https://api.unsplash.com/photos/random?client_id=_Z7eSHpRXlC2EFiyLPlD_Fc2UajDEr6_q58XOHeI0Y4&query=underwater"
+  "https://api.unsplash.com/photos/random?client_id=_4&query=underwater"
 )
   .then(function (response) {
     return response.json();

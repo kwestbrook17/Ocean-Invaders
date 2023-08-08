@@ -1,7 +1,7 @@
 // Function to handle the "Play Music" button click
 function playMusicButtonClick() {
     // Your YouTube Data API key
-    const youtubeApiKey = 'AIzaSyDE_8nd4N4DB2dA1FfewMtIckL7C0rC1vY'; 
+    const youtubeApiKey = ''; 
 
   
     const playMusicButton = document.getElementById('Music');
