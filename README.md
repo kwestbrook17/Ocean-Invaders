@@ -6,6 +6,8 @@ Welcome to Ocean Invaders, a retro-style 2D space shooter game!
 
 Ocean Invaders is a classic space shooter game where you control a player spaceship and face waves of enemy fish. Your objective is to destroy all enemy fish and survive as long as possible. The game has multiple levels, each with increasing difficulty.
 
+[![Alt Text](assets/images/screenshot.png)](https://kwestbrook17.github.io/project1/)
+
 ## How to Play
 
 - Use the arrow keys on your keyboard to move the Manta Ray left and right.
@@ -52,7 +54,6 @@ If you manage to defeat all enemy fish in a level, you will progress to the next
 ## Compatibility
 
 Ocean Invaders is designed to be compatible with modern web browsers, including Chrome, Firefox, Edge, and Safari.
-
 
 ## Troubleshooting
 
